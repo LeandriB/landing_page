@@ -29,6 +29,7 @@ const sections = document.querySelectorAll('section');
  * 
 */
 
+// Checks for Active Element
 function getActiveSection() {
     activeSection = sections[0];
     min = 10000;
@@ -41,7 +42,6 @@ function getActiveSection() {
     };
     return activeSection;
 };
-
 
 /**
  * End Helper Functions
@@ -71,7 +71,6 @@ function buildNav() {
 
 };
 
-
 // Add class 'active' to section when near top of viewport
 function active() {
     window.addEventListener('scroll', function () {
@@ -85,7 +84,6 @@ function active() {
         }
     });
 };
-
 
 // Scroll to anchor ID using scrollTO event
 function scroll() {
@@ -101,7 +99,6 @@ function scroll() {
 
     });
 };
-
 
 // Scroll to Top by clicking the button in the footer
 function scrollToTop() {
@@ -120,7 +117,7 @@ function scrollToTop() {
     })
 };
 
-// Function to hide/show navigation bar on scroll 
+// Function to hide/show navigation bar on scroll with short delay
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
     var currentScrollPos = window.pageYOffset;
@@ -142,12 +139,12 @@ window.onscroll = function() {
  * 
 */
 
-// Build menu 
+// Build navigation menu 
 buildNav();
-// Scroll to section on link click
+// Scroll to section when link is clicked
 scroll();
 // Set sections as active
 active();
-
+// Scrolls to top of page on button click
 scrollToTop();
 
