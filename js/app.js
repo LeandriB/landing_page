@@ -35,7 +35,7 @@ function getActiveSection() {
     min = 10000;
     for (section of sections) {
         let position = section.getBoundingClientRect();
-        if (position.top > -300 & position.top < min) {
+        if (position.top > -300 && position.top < min) {
             min = position.top;
             activeSection = section;
         };
@@ -78,7 +78,7 @@ function active() {
         section.classList.add('your-active-class');
         // remove active from other section
         for (let i of sections) {
-            if (i.id != section.id & i.classList.contains('your-active-class')) {
+            if (i.id != section.id && i.classList.contains('your-active-class')) {
                 i.classList.remove('your-active-class');
             }
         }
